@@ -120,7 +120,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\include;&quot;$(FIREFOX_SDK)\xulrunner-sdk\sdk\include&quot;;&quot;$(FIREFOX_SDK)\mozilla-1.9.1\modules\plugin\base\public&quot;"
+				AdditionalIncludeDirectories="..\..\include;&quot;$(FIREFOX_SDK)\xulrunner-sdk\sdk\include&quot;;&quot;$(FIREFOX_SDK)\mozilla\modules\plugin\base\public&quot;"
 				PreprocessorDefinitions="NDEBUG;MOZILLA_STRICT_API;XP_WIN;XP_WIN32;WIN32;_WINDOWS;_USRDLL;NPSCRIPTABLE_EXPORTS;_CRT_SECURE_NO_WARNINGS;USE_CLR;NPWINFORMSHOST_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
