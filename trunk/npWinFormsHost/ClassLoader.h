@@ -21,7 +21,7 @@ public:
 	static bool LoadAssemblyUrlLocation(String^ assemblyUrlLocation);
 	static property System::Windows::Forms::UserControl^ MainUserControl;
 	static Int32 ClassLoader::InvokeMember(String^ funcName, String^ parameter);
-
+	static void ClassLoader::SetSizeControl(int sizeX, int sizeY);
 
     static initonly ClassLoader^ Instance = gcnew ClassLoader;
 
