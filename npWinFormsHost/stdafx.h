@@ -15,6 +15,6 @@
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // Algunos constructores CString serán explícitos
 
 #include <atlbase.h>
-#include <atlstr.h>
+//#include <atlstr.h>
 
 // TODO: mencionar aquí los encabezados adicionales que el programa necesita

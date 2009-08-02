@@ -44,6 +44,6 @@ interface nsIScriptablePluginSample : nsISupports {
   void clear();
   PRUint32 invokeMethod(in string aCommandName, in string aCommandParameter);
   PRBool   loadClassUI(in string aAssemblyLocation, in string aclassFullName);
-
+  PRBool   setSizeControl(in PRUint32 sizeX,  in PRUint32 sizeY);
 
 };

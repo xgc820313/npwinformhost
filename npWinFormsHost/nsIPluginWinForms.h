@@ -1,5 +1,5 @@
 /*
- * DO NOT EDIT.  THIS FILE IS GENERATED FROM E:\Documents and Settings\ivanmen\Mis documentos\Visual Studio 2008\Projects\Mozilla  Sdks\mozilla-1.9.1\modules\plugin\tools\sdk\samples\scriptable\npWinFormsHost\nsIPluginWinForms.idl
+ * DO NOT EDIT.  THIS FILE IS GENERATED FROM C:\Documents and Settings\aspire\Mis documentos\Visual Studio 2008\Projects\Mozilla Sdks\mozilla\modules\plugin\tools\sdk\samples\scriptable\npWinFormsHost\nsIPluginWinForms.idl
  */
 
 #ifndef __gen_nsIPluginWinForms_h__
@@ -39,6 +39,9 @@ class NS_NO_VTABLE NS_SCRIPTABLE nsIScriptablePluginSample : public nsISupports 
   /* PRBool loadClassUI (in string aAssemblyLocation, in string aclassFullName); */
   NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval) = 0;
 
+  /* PRBool setSizeControl (in PRUint32 sizeX, in PRUint32 sizeY); */
+  NS_SCRIPTABLE NS_IMETHOD SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool *_retval) = 0;
+
 };
 
   NS_DEFINE_STATIC_IID_ACCESSOR(nsIScriptablePluginSample, NS_ISCRIPTABLEPLUGINSAMPLE_IID)
@@ -48,21 +51,24 @@ class NS_NO_VTABLE NS_SCRIPTABLE nsIScriptablePluginSample : public nsISupports 
   NS_SCRIPTABLE NS_IMETHOD ShowVersion(void); \
   NS_SCRIPTABLE NS_IMETHOD Clear(void); \
   NS_SCRIPTABLE NS_IMETHOD InvokeMethod(const char *aCommandName, const char *aCommandParameter, PRUint32 *_retval); \
-  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval); 
+  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval); \
+  NS_SCRIPTABLE NS_IMETHOD SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool *_retval); 
 
 /* Use this macro to declare functions that forward the behavior of this interface to another object. */
 #define NS_FORWARD_NSISCRIPTABLEPLUGINSAMPLE(_to) \
   NS_SCRIPTABLE NS_IMETHOD ShowVersion(void) { return _to ShowVersion(); } \
   NS_SCRIPTABLE NS_IMETHOD Clear(void) { return _to Clear(); } \
   NS_SCRIPTABLE NS_IMETHOD InvokeMethod(const char *aCommandName, const char *aCommandParameter, PRUint32 *_retval) { return _to InvokeMethod(aCommandName, aCommandParameter, _retval); } \
-  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval) { return _to LoadClassUI(aAssemblyLocation, aclassFullName, _retval); } 
+  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval) { return _to LoadClassUI(aAssemblyLocation, aclassFullName, _retval); } \
+  NS_SCRIPTABLE NS_IMETHOD SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool *_retval) { return _to SetSizeControl(sizeX, sizeY, _retval); } 
 
 /* Use this macro to declare functions that forward the behavior of this interface to another object in a safe way. */
 #define NS_FORWARD_SAFE_NSISCRIPTABLEPLUGINSAMPLE(_to) \
   NS_SCRIPTABLE NS_IMETHOD ShowVersion(void) { return !_to ? NS_ERROR_NULL_POINTER : _to->ShowVersion(); } \
   NS_SCRIPTABLE NS_IMETHOD Clear(void) { return !_to ? NS_ERROR_NULL_POINTER : _to->Clear(); } \
   NS_SCRIPTABLE NS_IMETHOD InvokeMethod(const char *aCommandName, const char *aCommandParameter, PRUint32 *_retval) { return !_to ? NS_ERROR_NULL_POINTER : _to->InvokeMethod(aCommandName, aCommandParameter, _retval); } \
-  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval) { return !_to ? NS_ERROR_NULL_POINTER : _to->LoadClassUI(aAssemblyLocation, aclassFullName, _retval); } 
+  NS_SCRIPTABLE NS_IMETHOD LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval) { return !_to ? NS_ERROR_NULL_POINTER : _to->LoadClassUI(aAssemblyLocation, aclassFullName, _retval); } \
+  NS_SCRIPTABLE NS_IMETHOD SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool *_retval) { return !_to ? NS_ERROR_NULL_POINTER : _to->SetSizeControl(sizeX, sizeY, _retval); } 
 
 #if 0
 /* Use the code below as a template for the implementation class for this interface. */
@@ -116,6 +122,12 @@ NS_IMETHODIMP nsScriptablePluginSample::InvokeMethod(const char *aCommandName, c
 
 /* PRBool loadClassUI (in string aAssemblyLocation, in string aclassFullName); */
 NS_IMETHODIMP nsScriptablePluginSample::LoadClassUI(const char *aAssemblyLocation, const char *aclassFullName, PRBool *_retval)
+{
+    return NS_ERROR_NOT_IMPLEMENTED;
+}
+
+/* PRBool setSizeControl (in PRUint32 sizeX, in PRUint32 sizeY); */
+NS_IMETHODIMP nsScriptablePluginSample::SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool *_retval)
 {
     return NS_ERROR_NOT_IMPLEMENTED;
 }

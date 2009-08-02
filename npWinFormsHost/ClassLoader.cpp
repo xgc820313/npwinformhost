@@ -36,3 +36,13 @@ Int32 ClassLoader::InvokeMember(String^ funcName, String^ parameter)
 
 
 
+void ClassLoader::SetSizeControl(int sizeX, int sizeY)
+{
+	MainUserControl->Width = sizeX;
+	MainUserControl->Height = sizeY;
+
+
+	
+	return;
+}
+

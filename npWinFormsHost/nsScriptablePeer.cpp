@@ -140,7 +140,10 @@ NS_IMETHODIMP nsScriptablePeer::Clear()
 
 NS_IMETHODIMP nsScriptablePeer::InvokeMethod(const char *aCommandName, const char *aCommandParameter, PRUint32 *_retval)
 {
-	*_retval = 100;
+	//*_retval = 100;
+	(*_retval) = ClassLoader::Instance->InvokeMember(gcnew System::String(aCommandName), gcnew System::String(aCommandParameter));
+
+
 	return NS_OK;
 }
 
@@ -180,4 +183,22 @@ NS_IMETHODIMP nsScriptablePeer::LoadClassUI(const char *aAssemblyLocation, const
 		return NS_ERROR_NOT_INITIALIZED;
 
 
+}
+
+
+
+
+
+NS_IMETHODIMP nsScriptablePeer::SetSizeControl(PRUint32 sizeX, PRUint32 sizeY, PRBool* _retval)
+{
+  
+	try
+	{
+	ClassLoader::Instance->SetSizeControl(sizeX, sizeY);
+	}
+	catch(System::Exception^ ex)
+	{
+		return NS_ERROR_FAILURE;
+	}
+	return NS_OK;
 }
